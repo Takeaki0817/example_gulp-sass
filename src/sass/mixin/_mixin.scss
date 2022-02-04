@@ -2,7 +2,7 @@
 // 矢印
 // ---------------------
 @mixin arrow(
-	$color: var(--baseFontColor),
+	$color: #000,
 	$rotate: 45deg,
 	$w: 6px,
 	$h: 6px,
@@ -72,11 +72,7 @@ $layer: (
 
 // 背景グラデーション
 // ---------------------
-@mixin bgGradient(
-	$degree: 90deg,
-	$start: var(--accent-color),
-	$end: var(--primary-color)
-) {
+@mixin bgGradient($degree: 90deg, $start: #000, $end: #fff) {
 	background-image: linear-gradient($degree, $start, $end);
 }
 
@@ -87,6 +83,8 @@ $layer: (
 	background: linear-gradient(transparent 70%, rgba($color, $alpha) 0%);
 }
 
+// スクロールバーを消す
+// ---------------------
 @mixin scrollbarNone {
 	-ms-overflow-style: none;
 	scrollbar-width: none;
