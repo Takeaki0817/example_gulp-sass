@@ -1,0 +1,8 @@
+$baseFontFamily: 'Noto Sans JP', sans-serif;
+$enFontFamily: 'Roboto', sans-serif;
+
+// pxからremへの計算
+// ex) font-size: rem(30);
+@function rem($px, $baseFontSize: 16) {
+	@return $px / $baseFontSize * 1rem;
+}
