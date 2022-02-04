@@ -1,7 +1,3 @@
-/* ------------------------------ */
-/* リセットCSS */
-/* ------------------------------ */
-
 html {
 	color: #000;
 	background: #fff;
@@ -28,6 +24,7 @@ fieldset,
 legend,
 input,
 textarea,
+button,
 p,
 blockquote,
 th,
@@ -39,7 +36,6 @@ td {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-	width: 100%;
 }
 
 fieldset,
@@ -103,56 +99,15 @@ input,
 textarea,
 select,
 button {
-	color: inherit;
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
 	line-height: inherit;
 	*font-size: 100%;
-	border-radius: 0;
-	border: none;
-	appearance: none;
-	-webkit-appearance: none;
-	background-color: inherit;
-}
-
-input,
-textarea,
-select {
-	font-size: 16px;
-}
-
-textarea {
-	resize: vertical;
-	display: block;
-}
-
-button {
-	padding: 0;
-	cursor: pointer;
 }
 
 legend {
 	color: #000;
-}
-
-main {
-	display: block;
-}
-
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-img {
-	width: 100%;
-	height: auto;
-	vertical-align: bottom;
-}
-
-svg {
-	display: block;
 }
 
 * {
@@ -164,4 +119,8 @@ svg {
 *::before,
 *::after {
 	box-sizing: border-box;
+}
+
+:focus:not(:focus-visible) {
+	outline: 0; /* キーボード操作"以外"でフォーカスされた際はoutlineを消す */
 }
